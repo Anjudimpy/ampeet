@@ -2,32 +2,361 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+.dotted-underline1 {
+  text-decoration: none; 
+  position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.dotted-underline1::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor; 
+  /* visibility: hidden; */
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px dotted;
+}
+
+.dotted-underline1:hover::after, .group:hover .dotted-underline1::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+
+.sha{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid rgba(180, 180, 180, 0.2);
+}
+.bgContact{
+  background-image: url('/contactBg.jpg');
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+
+
+}
+.btn1{
+  cursor: pointer;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  color:#00274dd6;
+}
+.btn1:hover{
+  color: #fff;
+}
+.btn1::before{
+  content: '';
+  position: absolute;
+  width:0%;
+  height:0%;
+  background: #e71c52e2;
+  z-index: -1;
+  transition: 1s;
+  top:100%;
+  right:100%;
+
+  border-radius: 50% 50% 0 0   ;
+ 
+}
+.btn1:hover::before{
+  height: 180%;
+  right: 0%;
+  top:-10%;
+  width: 180%;
+  
+ }
+
+.btn{
+  cursor: pointer;
+  transition: 2s;
+  position: relative;
+  overflow: hidden;
+  color:#00274dd6;
+}
+.btn:hover{
+  color: #fff;
+}
+.btn::before{
+  content: '';
+  position: absolute;
+  width:0%;
+  height:0%;
+  background: #e71c52ee;
+  z-index: -1;
+  transition: 2s;
+  top: 100%;
+  left: 100%;
+  border-radius:   50% 50%  0% 0% ;
+ 
+}
+.btn:hover::before{
+  height: 180%;
+  top: -10%;
+  left: 0%;
+  width: 180%;
+ }
+
+ /* //// */
+
+ 
+.btn{
+  cursor: pointer;
+  transition: 2s;
+  position: relative;
+  overflow: hidden;
+  color:#00274dd6;
+}
+.btnnn:hover{
+  color: #fff;
+}
+.btnnn::before{
+  content: '';
+  position: absolute;
+  width:0%;
+  height:0%;
+  background: #e71c52ee;
+  z-index: -1;
+  transition: 2s;
+  top: 100%;
+  left: 100%;
+  border-radius:   50% 50%  0% 0% ;
+ 
+}
+.btnnn:hover::before{
+  height: 180%;
+  top: -10%;
+  left: 0%;
+  width: 180%;
+ }
+
+
+
+.spacality{
+  cursor: pointer;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  color:#00274dd6;
+}
+.spacality:hover{
+  color: #fff;
+}
+.spacality::before{
+  content: '';
+  position: absolute;
+  width:100%;
+  height:0%;
+  background: #e71c52c0;
+  z-index: -1;
+  transition: 0.8s;
+  top: 50%;
+  left: 0%;
+ 
+}
+.spacality:hover::before{
+  height: 100%;
+  top: 0%;
+ }
+
+
+
+@layer components {
+  .nav-link{
+      @apply relative  cursor-pointer text-[17px] w-fit md:block after:block after:absolute after:h-[3px] after:mt-[2.1rem] after:bg-amp_blue after:w-full after:text-transparent after:scale-x-0 after:hover:scale-x-100 after:content-['heloo'] 
+      after:transition after:duration-300 after:origin-center hidden 
+  }
+
+}
+
+
+
+.dropdown-content{
+  cursor: pointer;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  color:#00274dd6;
+}
+.dropdown-content:hover{
+  color: #fff;
+}
+.dropdown-content::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0%;
+  height:180%;
+  background: #e71c52c0;
+  z-index: -1;
+  transition: 0.8s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.dropdown-content:hover::before{
+  width: 100%;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bgimage1{
+  background-image: url('/pro.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.owlimg{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bgimage{
+  background-image: url('/bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bgTransparent{
+  background-color: #011249b1;
+  opacity: 90%;
+}
+
+.dotted-underline {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: white;
+}
+
+.group:hover .dotted-underline {
+  text-decoration-color: white;
+}
+
+.textShadow {
+  text-shadow: 2px 2px 4px rgba(255, 3, 3, 0.707);
+}
+.textShadow1 {
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+.textShadow2 {
+  text-shadow: 2px 2px 4px rgb(252, 188, 188);
+}
+.title-element {
+  width: 35px;
+  height: 35px;
+  margin: 10px auto;
+  background-color: #fb0202;
+  padding: 10px;
+  line-height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  position: relative;
+}
+.title-element::before {
+  content: '';
+  width: 90px;
+  position: absolute;
+  height: 4px;
+  top: 15px;
+  right: -90px;
+  background: linear-gradient(90deg,#fb0202,transparent);
+}
+.title-element::after {
+  content: '';
+  width: 90px;
+  height: 4px;
+  position: absolute;
+  top: 15px;
+  left: -90px;
+  background: linear-gradient(270deg,#fb0202,transparent);
+}
+.vedio-button {
+  position: relative;
+  background-color: #e03202;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+
+  border-radius: 50%;
+ 
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin: 0 14px;
+}
+
+.vedio-button::before,
+.vedio-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+ 
+}
+
+.vedio-button::before {
+  background-color: #fac1bac7;
+  animation: waveo 2s infinite;
+  padding: 10px;
+}
+
+.vedio-button::after {
+  background-color:transparent;
+  animation: wavee 1s infinite;
+}
+
+@keyframes waveo {
+ 
+  0% {
+    box-shadow: 0 0 0 0;
+  }
+  50% {
+    box-shadow: 0 0 20px #c72e00;
+    opacity: 0;
+    transform: scale(1.7);
+  }
+ 
+  100% {
+    box-shadow: 0 0 20px #c72e00;
+    opacity: 0;
+    transform: scale(1.7);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@keyframes wavee {
+  0% {
+    transform: scaleX(1);
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  25% {
+    transform: scaleX(1.1);
+  }
+
+  50% {
+    transform: scaleX(1);
   }
 }
+
