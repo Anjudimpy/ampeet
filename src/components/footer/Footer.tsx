@@ -24,7 +24,7 @@ const Footer = () => {
        <span className='group pt-5 flex relative   hover:text-amp_red transition duration-500  hover:underline scale-x-100'>
            <FaLocationDot className=' text-[22px] text-amp_red pr-2 group-hover:animate-bounce'/>
          <p className=''>
-  Address :- {" "} Padappai, Tamil Nadu 601301
+  Address :- {" "} Padappai, Tamil Nadu 813213
 
 </p>
            </span>
